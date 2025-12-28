@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "dev.laubfrosch.worldborderexpander.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ServerMetadataMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
