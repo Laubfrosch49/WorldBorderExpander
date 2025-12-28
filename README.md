@@ -9,13 +9,6 @@ Eine serverseitige Fabric-Mod entwickelt für Minecraft 1.21.11, die die Weltbar
 - **MOTD-Integration**: Zeigt die aktuelle Border-Größe und nächste Erweiterung in der Server-Liste
 - **Serverside-only**: Keine Client-Mod erforderlich
   
-<br/><br/>
-## Installation
-
-1. Installiere Fabric Loader 0.18.1+ für Minecraft 1.21.11 (hierfür getestet) 
-2. Installiere Fabric API 0.110.5+
-3. Platziere die Mod-Datei im `mods/` Ordner deines Servers
-4. Starte den Server
    
 <br/><br/>
 ## Befehle
