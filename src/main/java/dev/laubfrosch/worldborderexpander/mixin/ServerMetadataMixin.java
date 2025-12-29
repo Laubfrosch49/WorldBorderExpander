@@ -4,16 +4,12 @@ import dev.laubfrosch.worldborderexpander.WorldBorderExpander;
 import net.minecraft.server.ServerMetadata;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ServerMetadata.class)
 public abstract class ServerMetadataMixin {
-
-	@Shadow
-	public abstract Text description();
 
 	@Inject(method = "description", at = @At("RETURN"), cancellable = true)
 	private void addWorldBorderToMotd(CallbackInfoReturnable<Text> cir) {
@@ -25,7 +21,7 @@ public abstract class ServerMetadataMixin {
 
 		String expansionInfo = WorldBorderExpander.isAutoExpansionEnabled() ?
 				"§7 und täglich §6" + amountPrefix + amount + "§7 um §c" + String.format("%02d:%02d", WorldBorderExpander.getTargetHour(), WorldBorderExpander.getTargetMinute()) + " Uhr" :
-				"§7. Das Maximum ist erreicht.";
+				"§7 und die Größe bleibt.";
 
 		String modifiedMotd = originalDescription.getString() +
 				"\n§7Auf §a" + (int)borderSize + "² Blöcken" + expansionInfo;
