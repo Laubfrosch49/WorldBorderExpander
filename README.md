@@ -70,26 +70,6 @@ Zeigt die aktuelle Konfiguration an:
 - Aktuelle World Border Größe
 
 <br/><br/>
-## Konfiguration
-
-Die Konfigurationsdatei wird automatisch unter `config/worldborderexpander.json` erstellt:
-```json
-{
-  "autoExpansionEnabled": false,
-  "expansionAmount": 100,
-  "targetHour": 0,
-  "targetMinute": 0
-}
-```
-
-### Parameter
-
-- `autoExpansionEnabled`: Aktiviert/deaktiviert die automatische Erweiterung
-- `expansionAmount`: Anzahl der Blöcke für die Erweiterung (kann negativ sein)
-- `targetHour`: Stunde der täglichen Erweiterung (0-23)
-- `targetMinute`: Minute der täglichen Erweiterung (0-59)
-
-<br/><br/>
 ## MOTD-Integration
 
 Die Mod erweitert die Server-Beschreibung (MOTD) automatisch um folgende Informationen:
